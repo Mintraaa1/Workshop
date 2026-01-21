@@ -14,7 +14,11 @@ html {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
-    background-color: rgb(253, 230, 211);
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsb6bF9tDOR1GODdSkdJg2HAAeZn3_ZZdyjg&s");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(240, 158, 90);
 }
 
 /* Component Styles */
@@ -98,8 +102,8 @@ code {
 /* Group 1 Styles */
 .header {
     /* set properties */
-    background-color: rgb(238, 174, 90);
-    box-shadow: 5px 5px 15px rgba(209, 187, 187, 0.3);
+    background-color: rgb(97, 138, 144);
+    box-shadow: 5px 5px 15px rgba(98, 254, 251, 0.874);
     padding: 20px;
 
     /* จัดตำแหน่ง */
@@ -122,19 +126,34 @@ code {
 }
 
 .btn-text-link li {
-    background-color: rgb(133, 133, 100);
-    padding: 13px 20px;
-    border-radius: 50%;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
 }
 
 .btn-text-link li:hover {
-    background-color: rgb(204, 204, 161);
-    cursor: pointer;
+    transform: translateY(-10px);
+    
+}
+.btn-text-link a{
+    /*background-color: rgb(133, 133, 100);*/
+    background: linear-gradient(135deg,rgb(245, 141, 141),rgb(236, 230, 212));
+    box-shadow: 0 4px 15px rgba(55, 0, 0, 0.1);
+    padding: 13px 20px;
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-text-link a:hover {
+    background: linear-gradient(135deg,rgb(216, 0, 65),rgb(253, 161, 251));
+
 }
 
 /* Group 2 Styles */
 .image-small {
-width: 100px;
+    width: 100px;
 height: auto;
 }
 
@@ -152,18 +171,101 @@ height: auto;
 .position.right {
     justify-content: flex-end;
 }
-a {
-            text-decoration: none;
-            color: rgb(139, 0, 14);
-            background-color: rgb(217, 209, 168);
-            padding: 2px 8px;
-            border-radius: 10px;
-        }
+
 /* Group 3 Styles */
+.img-fixed {
+    width: 260px;
+    height: 60px;
+    object-fit: cover;
+
+    margin: 15px 0;
+    border: 2px solid gray;
+}
+
+
 /* Group 4 Styles */
+.obj-fit-image {
+    width: 800px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.obj-fit-image.contain {
+    object-fit: contain;
+}
+
+.obj-fit-image.fill {
+    object-fit: fill;
+}
+
+.obj-fit-image.cover {
+    object-fit: cover;
+}
+
+
 /* Group 5 Styles */
+.YT-img img {
+    transition: 0.3s ease;
+    width: 200px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 20px;
+}
+
+.YT-img img:hover {
+    transform: scale(1.05);
+}
+
+
 /* Group 6 Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.gallery img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* Group 7 Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px;
+}
+
 /* Group 8 Styles */
+figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* Group 9 Styles */
+.local-image {
+    background-image: url("../images/snow1.jpg");
+    background-size: cover;
+}
+
 /* Group 10 Styles */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.back-link:hover {
+    text-decoration: none;
+    color: #df9143;
+}

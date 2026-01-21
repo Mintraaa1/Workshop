@@ -50,7 +50,7 @@
 
         <!-- For Group 3: Card 2: Resize & aspect -->
         <div class="card module-1" id="card2">
-            <h2>2) Resize & Aspect Ratio object-fit</h2>
+            <h2>2) Resize & Aspect Ratio <span class="badge">object-fit</span></h2>
             <p>ถ้ากำหนดทั้งความกว้างและสูง ให้ใช้ <code>object-fit</code> เพื่อไม่ให้ภาพบิด</p>
             <pre>
                 /* ครอปภาพให้พอดีกรอบ */
@@ -79,22 +79,22 @@
                 .obj-fit-image.cover { object-fit: cover; }
             </pre>
             <h3>ภาพต้นฉบับ</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s"
-                alt="">
+            <img src="https://s359.kapook.com/pagebuilder/c591f8c9-fe2f-4370-b4f0-74c25aa9ba29.jpg"
+                alt="ภาพต้นฉบับ">
             <h3>ใส่ <code>object-fit: contain</code> ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)</h3>
-            <div class="contain">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s"
-                    alt="">
+            <div class=".obj-fit-image contain">
+                 <img src="https://s359.kapook.com/pagebuilder/c591f8c9-fe2f-4370-b4f0-74c25aa9ba29.jpg"
+                    alt="ภาพต้นฉบับ">
             </div>
             <h3>object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)</h3>
-            <div class="fill">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s"
-                    alt="">
+            <div class=".obj-fit-image fill">
+                <img src="https://s359.kapook.com/pagebuilder/c591f8c9-fe2f-4370-b4f0-74c25aa9ba29.jpg"
+                    alt="ภาพต้นฉบับ">
             </div>
             <h3>object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก</h3>
-            <div class="cover">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s"
-                    alt="">
+            <div class=".obj-fit-image cover">
+                 <img src="https://s359.kapook.com/pagebuilder/c591f8c9-fe2f-4370-b4f0-74c25aa9ba29.jpg"
+                    alt="ภาพต้นฉบับ">
             </div>
         </div>
             <!-- For Group 5: Card 4: Image as Link -->
@@ -107,11 +107,13 @@
                             &lt;img src="images/banner.jpg" alt="Banner"&gt;
                         &lt;/a&gt;
                     </pre>
+                    <div class="YT-img">
                     <a href="https://www.youtube.com" target="_blank">
-                        <img src="https://m.media-amazon.com/images/I/4195dyf+rFL.png" alt="Banner" class="YT-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRSibuzODLb5lETQ6fI9ebq-FQjWwL-7cBWQ&s" alt="Youtube logo">
                     </a>
                     <p class="note">ใช้<code>target="_blank"</code> เมื่ออยากเปิดในแท็บใหม่
                     </p>
+                    </div>
                 </div>
             </div>
             <!-- For Group 6: Card 5: Gallery -->
@@ -123,12 +125,12 @@
                     .gallery img { height: 120px; object-fit: cover; }
                 </pre>
                 <div class="gallery">
-                    <img src="1.png" alt="Image 1">
-                    <img src="2.png" alt="Image 2">
-                    <img src="3.png" alt="Image 3">
-                    <img src="4.png" alt="Image 4">
-                    <img src="5.png" alt="Image 5">
-                    <img src="6.png" alt="Image 6">
+                <img src="https://placehold.co/400x400?text=1" alt="Gallery 1">
+                <img src="https://placehold.co/400x400?text=2" alt="Gallery 2">
+                <img src="https://placehold.co/400x400?text=3" alt="Gallery 3"> 
+                <img src="https://placehold.co/400x400?text=4" alt="Gallery 4">
+                <img src="https://placehold.co/400x400?text=5" alt="Gallery 5">
+                <img src="https://placehold.co/400x400?text=6" alt="Gallery 6">
                 </div>
                 <p
                     style="color: #888; font-size: 14px; border-left: 2px solid #ddd; padding-left: 10px; margin-top: 15px;">
@@ -145,7 +147,7 @@
                     height : auto;
                     }
                 </pre>
-                <img src="https://images.dmc.tv/wallpaper/raw/0f2eb9c101b324815d366a.jpg" alt="รูปทะเล">
+                <img src="https://placehold.co/1200x800?text=Responsive+image" alt="responsive">
             </div>
             <!-- For Group 8: Card 7: Figure & Caption + Task -->
             <div class="card module-5" id="card7">
@@ -160,7 +162,7 @@
                         &lt;figcaption&gt;รูปที่ 1: คำอธิบายภาพ&lt;/figcaption&gt;
                         &lt;/figure&gt;
                 </pre>
-                <figure style="margin-top: 20px; text-align: center;">
+                <figure>
                     <img src="https://img.freepik.com/free-photo/milford-sound-new-zealand-travel-destination-concept_53876-42945.jpg"
                         alt="ทิวทัศน์ธรรมชาติ" style="width: 100%; max-width: 600px; border-radius: 8px;">
                     <figcaption style="margin-top: 8px; color: #666;">
