@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kanit","Segoe UI",sans-serif;
+  background-color: rgb(232, 248, 248);
+  color: #9a1212;
+}
+.wrapper {
+  width: 1000px;
+  max-width: 100%;
+  margin: auto;
+  /*background-color: rgb(254, 253, 196);*/
+}
+
+
+/*==== header ====*/
+
+.site-header {
+  background-color: white;         /*background: white;  เฉยๆก็ใช้ได้ แต่ถ้าใช้ตัวนี้ มันจะโหลดทุกตัวเลยที่อยู่ภายใต้ background พวก image ฯลฯ*/
+  padding: 20px 0;
+  border-bottom: 2px solid red;
+}
+.box-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 1.5rem;/*ถ้าอยากใช้กับ response ใช้ rem ได้ ค่าเริ่มต้นของ rem คือ 16  วิธีคิดคือ 16/24=1.5 */  
+  margin-bottom: 4px;
+}
+
+.header-subtitle {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: rgb(52, 52, 52);
+}
