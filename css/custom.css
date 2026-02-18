@@ -10,8 +10,8 @@ body {
   color: #9a1212;
 }
 .wrapper {
-  width: 1000px;
-  max-width: 100%;
+  width: 1100px;
+  max-width: 90%;
   margin: auto;
   /*background-color: rgb(254, 253, 196);*/
 }
@@ -830,16 +830,94 @@ transform 0.2s ease; */
   .site-header {
     background-color: #7c1ec3;
   }
+  
+  .hero-grid {
+    grid-template-columns: 1fr; /* .content-layout และ .content-layout ใช้ , ก็ได้ */
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row.full-width{
+    flex-direction: column;
+    gap: 3px;
+  }
+  .nav-menu {
+  flex-direction: column;
+  padding-top: 10px;
+  }
+  .nav-menu li a {
+  border-top: 1px solid #f0f0f0;
+}
 }
 
 @media (max-width: 576px) {
   .site-header {
     background-color: #c31e71;
   }
+  /* กำหนดขนาดพื้นที่ของปุ่ม */
+  #burger-menu {   /* # คือการอ้างอิงถึง id ถ้า . คือ class*/
+    display: block;
+    height: 25px;
+    width: 30px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  /* วาดเส้น 3 เส้น */
+    #burger-menu span,
+    #burger-menu span::before,
+    #burger-menu span::after{
+      background-color: #fff;
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      display: block;
+      transition: all 0.3s ease;
+      content: "";
+    }
+    /* จัดตำแหน่งเส้น 3 เส้น */
+    #burger-menu span{ top: 11px;}
+    #burger-menu span::before{ top: -8px; }
+    #burger-menu span::after{ top: 8px;}
+  
+  /* Animation เมื่อกด */
+
+    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+    #burger-menu.close span {
+        background: transparent;
+    }
+
+    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+    #burger-menu.close span:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+    #burger-menu.close span:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+  
+  /* ซ่อนเมนู */
+  #menu {
+    display: none;
+    flex-direction: column;
+    background: #91a6af;
+  }
+  /* เปิดเมนู  active แสดงเมนูขึ้นมา */
+  #menu.overlay{
+    display: flex;
+  }
 }
-
-
-
 
 
 /*
