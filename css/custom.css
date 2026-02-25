@@ -185,6 +185,11 @@ a:hover {
   /* background-color: #1e8bc3; */
 }
 
+.post-list {
+  display: flex;
+  flex-direction: column;
+}
+
 /* post Main Left */
 .card {
   background-color: #ffffff;
@@ -528,7 +533,7 @@ transform 0.2s ease; */
   padding: 30px 25px;
   border-radius: 20px;
   color: #fff;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-widget {
@@ -602,39 +607,37 @@ transform 0.2s ease; */
 .btn-subscribe:hover,
 .btn-contact:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Facebook Card */
 
 .facebook-card {
-  background: #ffffff;              
+  background: #ffffff;
   padding: 20px;
-  border-radius: 6px;               /* มุมโค้ง */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+  border-radius: 6px; /* มุมโค้ง */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .facebook-box {
-  width: 100%;              /* เต็มความกว้าง */
-  background: #ebeced;      
+  width: 100%; /* เต็มความกว้าง */
+  background: #ebeced;
   padding: 22px;
   border-radius: 10px;
   text-align: center;
 }
 
-
 .facebook-page-name {
-  font-size: 16px;                  /* เล็กลง */
-  font-weight: 600;                 /* ไม่หนาเกิน */
+  font-size: 16px; /* เล็กลง */
+  font-weight: 600; /* ไม่หนาเกิน */
   color: #333;
   margin-bottom: 15px;
 }
 
 .facebook-like-box {
-  background: #f1f3f5;              
+  background: #f1f3f5;
   padding: 22px 15px;
-  border-radius: 8px;               
+  border-radius: 8px;
   text-align: center;
 }
 
@@ -647,26 +650,23 @@ transform 0.2s ease; */
 
 .facebook-like-count {
   font-size: 15px;
-  font-weight: 500;                 
+  font-weight: 500;
   color: #333;
 }
 
 .facebook-title {
   font-size: 16px;
-  font-weight: 600;   /* ทำให้หนาขึ้น */
+  font-weight: 600; /* ทำให้หนาขึ้น */
   color: #333;
   margin-bottom: 14px;
 }
-  
-
-
 
 /*  Sponsor  */
 
 .sponsor-box {
-  width: 100%;             
-  margin: 12px 0;           
-  
+  width: 100%;
+  margin: 12px 0;
+
   background: #f0f2f5;
   height: 260px;
 
@@ -710,7 +710,6 @@ transform 0.2s ease; */
   text-decoration: underline;
 }
 
-
 .back-container {
   text-align: center;
   margin: 40px 0 20px;
@@ -735,8 +734,6 @@ transform 0.2s ease; */
   transform: translateY(-2px);
 }
 
-
-
 /* Glod Price*/
 
 :root {
@@ -748,14 +745,13 @@ transform 0.2s ease; */
   --down: rgb(233, 24, 24);
 }
 
-
 .wrap-table {
   border: 1px solid #777;
 }
 
 .price-table {
   width: 100%;
-  
+
   color: #8b1010;
 
   background-color: var(--bgIn01);
@@ -766,48 +762,46 @@ transform 0.2s ease; */
   border-collapse: collapse;
 }
 
-
-.price-table th , 
+.price-table th,
 .price-table td {
   border: 1px solid var(--line);
   padding: 10px 4px;
 }
 
-.price-table thead th{
+.price-table thead th {
   background-color: var(--bgTopic);
 }
 
-.month{
+.month {
   background-color: var(--bgTopic);
 }
 
-.num{
+.num {
   text-align: right;
 }
- 
+
 .delta {
   text-align: center;
 }
 .delta.up {
   color: var(--up);
 }
-.delta.down{
+.delta.down {
   color: var(--down);
 }
 
 .price-table tr.total th,
-.price-table tr.total td{
-   background-color: var(--bgAll02);
-   font-weight: 600;
+.price-table tr.total td {
+  background-color: var(--bgAll02);
+  font-weight: 600;
 }
 
 .icon {
   display: inline-block;
   width: 0px;
   height: 0px;
-  border-left: 6px solid transparent ;
-  border-right: 6px solid transparent ;
-
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
 
 .icon.up {
@@ -830,7 +824,7 @@ transform 0.2s ease; */
   .site-header {
     background-color: #7c1ec3;
   }
-  
+
   .hero-grid {
     grid-template-columns: 1fr; /* .content-layout และ .content-layout ใช้ , ก็ได้ */
   }
@@ -843,17 +837,17 @@ transform 0.2s ease; */
     grid-template-columns: 1fr;
   }
 
-  .form-row.full-width{
+  .form-row.full-width {
     flex-direction: column;
     gap: 3px;
   }
   .nav-menu {
-  flex-direction: column;
-  padding-top: 10px;
+    flex-direction: column;
+    padding-top: 10px;
   }
   .nav-menu li a {
-  border-top: 1px solid #f0f0f0;
-}
+    border-top: 1px solid #f0f0f0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -861,7 +855,8 @@ transform 0.2s ease; */
     background-color: #c31e71;
   }
   /* กำหนดขนาดพื้นที่ของปุ่ม */
-  #burger-menu {   /* # คือการอ้างอิงถึง id ถ้า . คือ class*/
+  #burger-menu {
+    /* # คือการอ้างอิงถึง id ถ้า . คือ class*/
     display: block;
     height: 25px;
     width: 30px;
@@ -871,42 +866,48 @@ transform 0.2s ease; */
   }
 
   /* วาดเส้น 3 เส้น */
-    #burger-menu span,
-    #burger-menu span::before,
-    #burger-menu span::after{
-      background-color: #fff;
-      height: 3px;
-      width: 100%;
-      position: absolute;
-      display: block;
-      transition: all 0.3s ease;
-      content: "";
-    }
-    /* จัดตำแหน่งเส้น 3 เส้น */
-    #burger-menu span{ top: 11px;}
-    #burger-menu span::before{ top: -8px; }
-    #burger-menu span::after{ top: 8px;}
-  
+  #burger-menu span,
+  #burger-menu span::before,
+  #burger-menu span::after {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease;
+    content: "";
+  }
+  /* จัดตำแหน่งเส้น 3 เส้น */
+  #burger-menu span {
+    top: 11px;
+  }
+  #burger-menu span::before {
+    top: -8px;
+  }
+  #burger-menu span::after {
+    top: 8px;
+  }
+
   /* Animation เมื่อกด */
 
-    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
-    #burger-menu.close span {
-        background: transparent;
-    }
+  /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+  #burger-menu.close span {
+    background: transparent;
+  }
 
-    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
-    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
-    #burger-menu.close span:before {
-        transform: rotate(45deg);
-        top: 0;
-    }
+  /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+  /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+  #burger-menu.close span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
 
-    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
-    #burger-menu.close span:after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-  
+  /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+  #burger-menu.close span:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
   /* ซ่อนเมนู */
   #menu {
     display: none;
@@ -914,10 +915,24 @@ transform 0.2s ease; */
     background: #91a6af;
   }
   /* เปิดเมนู  active แสดงเมนูขึ้นมา */
-  #menu.overlay{
+  #menu.overlay {
     display: flex;
   }
 }
+
+
+/* ค่าลบ ตัวลบมากสุดจะอยู่บนสุด */
+.order-image { order: -3}
+.order-table { order: -2}
+.order-form { order: -1}
+
+/* ค่าบวก ตัวบวกน้อยสุดจะอยู่บนสุด */
+.order-widget01 { order: 5 }
+.order-widget02 { order: 2 }
+.order-widget03 { order: 1 }
+.order-widget04 { order: 4 }
+.order-widget05 { order: 3 }
+
 
 
 /*
