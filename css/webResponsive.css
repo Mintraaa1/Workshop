@@ -14,6 +14,7 @@
     --shade-color6: rgb(191, 183, 32);
 
     --bg-gray: hsl(0, 0%, 73%);
+    --pink-color: rgb(255, 0, 128);
 }
 
 * {
@@ -37,7 +38,7 @@ header {
 
 .header-container {
     background-color: var(--background-color);
-    /* box-shadow: var(--box-shadow);       กล่องที่อยู่ตรง header คอมเม้นปิดไว้แล้*/ 
+    /* box-shadow: var(--box-shadow);       กล่องที่อยู่ตรง header คอมเม้นปิดไว้แล้*/
 
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,7 @@ header {
     margin: 0 auto;
 }
 
- 
+
 .brand {
     color: var(--secondary-color);
     font-size: 0.5rem;
@@ -60,10 +61,12 @@ header {
     .logo {
         display: flex;
         align-items: center;
+
         img {
             width: 40px;
             margin-right: 10px;
         }
+
         h1 {
             color: var(--secondary-color);
         }
@@ -72,7 +75,7 @@ header {
 
 .header-button {}
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,7 +102,7 @@ nav ul{
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--base-white-color);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -120,24 +123,26 @@ nav ul{
     font-weight: bold;
 
     color: var(--base-white-color);
-    background: linear-gradient(to right, var(--shade-color1),var(--shade-color2));
+    background: linear-gradient(to right, var(--shade-color1), var(--shade-color2));
 }
+
 .btn-login {
     font-size: 1rem;
     font-weight: bold;
 
     color: var(--base-white-color);
-    background: linear-gradient(to right, var(--shade-color3),var(--shade-color4));
+    background: linear-gradient(to right, var(--shade-color3), var(--shade-color4));
 }
 
 
 .btn-signup:hover {
     color: var(--base-white-color);
-    background: linear-gradient(to right, var(--shade-color5),var(--shade-color6));
+    background: linear-gradient(to right, var(--shade-color5), var(--shade-color6));
 }
+
 .btn-login:hover {
     color: var(--base-white-color);
-    background: linear-gradient(to right, var(--shade-color5),var(--shade-color6));
+    background: linear-gradient(to right, var(--shade-color5), var(--shade-color6));
 }
 
 .btn:hover {
@@ -185,7 +190,7 @@ nav ul{
     img {
         width: 100%;
         object-fit: cover;
-        border-radius: 50%; 
+        border-radius: 50%;
         aspect-ratio: 1/1;
         /* เพราะรูปไม่เป็นจัตุรัสเลยต้องใส่ aspect-ratio*/
     }
@@ -194,7 +199,7 @@ nav ul{
 
 /*  SaaS Solution Section    */
 .bg-gray {
-    background-color:var(--bg-gray);
+    background-color: var(--bg-gray);
 }
 
 .solution {
@@ -211,6 +216,7 @@ nav ul{
         color: var(--primary-color);
         margin-bottom: 20px;
     }
+
     p {
         font-size: 1.2rem;
         margin-bottom: 20px;
@@ -220,19 +226,21 @@ nav ul{
 .solution-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;   
-    
+    gap: 20px;
+
 }
 
 .item {
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     background-color: var(--base-white-color);
+
     h3 {
         font-size: 1.5rem;
         color: var(--primary-color);
         margin-bottom: 10px;
     }
+
     p {
         font-size: 1rem;
         margin-bottom: 10px;
@@ -258,17 +266,19 @@ nav ul{
     justify-content: space-between;
     align-items: center;
 
-    flex-direction: row-reverse; /* คือการสลับฝั่งของรูป*/
+    flex-direction: row-reverse;
+    /* คือการสลับฝั่งของรูป*/
     gap: 30px;
 
     margin: 30px 0;
 }
+
 .left-side.order-photo img {
     width: 100%;
-        object-fit: cover;
-        border-radius: 50%; 
-        aspect-ratio: 1/1;
-        /* เพราะรูปไม่เป็นจัตุรัสเลยต้องใส่ aspect-ratio*/
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    /* เพราะรูปไม่เป็นจัตุรัสเลยต้องใส่ aspect-ratio*/
 }
 
 
@@ -280,7 +290,7 @@ nav ul{
 
 .discover-content {
     display: grid;
-    grid-template-columns: repeat(3,1fr);    
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -309,10 +319,12 @@ footer {
 
         margin-bottom: 20px;
     }
+
     img {
         width: 40px;
         height: auto;
     }
+
     h3 {
         font-size: 2rem;
         color: var(--secondary-color);
@@ -326,6 +338,7 @@ footer {
 
 .footer-right {
     display: flex;
+    gap: 40px;
 }
 
 .footer-item {
@@ -336,6 +349,7 @@ footer {
 
     ul {
         list-style: none;
+
         li {
             margin-bottom: 4px;
 
@@ -358,34 +372,325 @@ footer {
     max-width: 800px;
     margin: 0 auto;
 }
+
 .form-row {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.form-group { flex:1}
+.form-group {
+    flex: 1
+}
 
-.form-group label{ 
+.form-group label {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
 }
+
 .form-input,
-.form-select{
+.form-select,
+.form-textarea {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 2px solid rgb(64, 62, 62);
+    border: 2px solid var(--bg-gray);
     border-radius: 8px;
     font-size: 1rem;
     background-color: var(--base-white-color);
 }
+
 .form-input:focus,
-.form-select:focus{
+.form-select:focus,
+.form-textarea:focus {
     border-color: var(--shade-color1);
     box-shadow: 0 0 3px var(--bg-gray);
     outline: none;
 }
 
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
 
+    flex-wrap: wrap;
+}
+
+.radio-item,
+.checkbox-item {
+    border: 2px solid var(--base-white-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+
+    font-size: 0.9rem;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.radio-item:hover,
+.checkbox-item:hover {
+    border-color: var(--primary-color);
+}
+
+.radio-item input,
+.checkbox-item input {
+    accent-color: var(--pink-color);
+}
+
+.radio-item input:checked+span,
+.checkbox-item input:checked+span {
+    color: var(--shade-color1);
+}
+
+.form-btn {
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+    padding: 32px 0;
+    border-top: 2px solid var(--primary-color);
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: var(--shade-color2);
+    color: var(--base-white-color);
+}
+
+.btn-reset {
+    background-color: var(--shade-color3);
+    color: var(--base-white-color);
+}
+
+.btn-submit:hover {
+    background-color: var(--shade-color1);
+    color: var(--base-white-color);
+}
+
+.btn-reset:hover {
+    background-color: var(--shade-color1);
+    color: var(--base-white-color);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+.form-title{
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/*-----------------Responsive--------------------*/
+
+@media (max-width: 768px) {
+    .header-button {
+        display: none;
+    }
+
+    .hero,
+    .customize ,
+    .support {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
+
+    .solution-content,
+    .discover-content {
+        grid-template-columns: 1fr;
+    }
+    .order-text {
+        order: 2;
+    }
+    .order-photo{
+        order: 1;
+        margin-bottom: 30px;
+    }
+    .footer-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav#menu.overlay {
+    display: flex;
+}
+    .form-row,
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+    }
+
+    .radio-item,
+    .checkbox-item {
+        border: none;
+        padding: 2px 18px;
+    }   
+
+
+
+
+      /* แสดง hamburger */
+
+    /* กำหนดขนาด/พื้นที่ของปุ่ม */
+    #burger-menu {
+        display: block;
+        cursor: pointer;
+        height: 25px;
+        width: 30px;
+        position: relative;
+        z-index: 1000;
+        /* ให้อยู่เหนือเมนูเต็มจอ */
+    }
+
+
+    /* วาด “เส้น 3 ขีด” ด้วย span + pseudo elements */
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+        background: #fff;
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        transition: 0.3s ease;
+        content: "";
+    }
+
+
+    /* จัดตำแหน่ง 3 เส้น (บน/กลาง/ล่าง) */
+
+    /* วางเส้น “กลาง” ไว้กลาง ๆ ปุ่ม */
+    #burger-menu span {
+        top: 11px;
+    }
+
+    /* ให้มัน “ขยับขึ้น” ไปเป็นเส้นบน */
+    #burger-menu span:before {
+        top: -8px;
+    }
+
+    /* ขยับลงไปเป็นเส้นล่าง */
+    #burger-menu span:after {
+        top: 8px;
+    }
+
+
+
+    /* (----เพิ่ม----) ให้กล่อง header เป็นจุดอ้างอิงเมนู */
+    .header-container {
+        position: relative;
+    }
+
+
+/* แก้ตรงนี้ใหม่ -----  ซ่อนเมนู */
+   
+    #menu {
+        /* เปลี่ยนจาก display:none เป็นกล่องลอยแบบ absolute */
+        display: none;
+
+        flex-direction: column;
+        background: #286d9b;
+        /* ยังซ่อนเหมือนเดิม */
+
+        position: absolute;
+        /* สำคัญ: ลอยเมนู */
+
+        top: calc(100% + 10px);
+        /* ใต้แถบ header */
+
+        right: 0;
+        /* ชิดขวา ใกล้ burger */
+
+        width: 290px;
+        /* ✅ กว้างขึ้น */
+
+        padding: 10px;        
+        border-radius: 14px;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+        z-index: 999;
+
+
+        /* max-width: 92vw; */
+        /* กันล้นจอบนมือถือ */
+    }
+
+  /*==== (end เพิ่ม) ==== */
+
+
+    /* เปิดเมนูเมื่อ active  แสดงเมนูขึ้นมา*/
+    #menu.overlay {
+        display: flex;
+    }
+
+    /* Animation เมื่อกด */
+
+    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+    #burger-menu.close span {
+        background: transparent;
+    }
+
+    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+    #burger-menu.close span:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+    #burger-menu.close span:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+/* ----------------------------------- */
+
+    /* Navbar */
+
+    .nav-menu {
+        flex-direction: column;
+        display: block;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+
+    .nav-menu li a {
+        display: block;
+    }
+
+    .nav-menu li:hover {
+        background-color: var(--base-white-color);
+    }
+
+    .nav-menu li:hover a {
+        color: var(--primary-color);
+    }
+}
