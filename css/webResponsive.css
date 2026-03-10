@@ -50,7 +50,7 @@ header {
 
 .brand {
     color: var(--secondary-color);
-    font-size: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .logo-menu {
@@ -80,7 +80,7 @@ nav ul {
     justify-content: space-between;
     align-items: center;
 
-    gap: 15px;
+    gap: 10px;
     list-style: none;
 
     margin-left: 20px;
@@ -119,16 +119,23 @@ nav ul {
 }
 
 .btn-signup {
-    font-size: 1rem;
-    font-weight: bold;
-
+    padding: 8px 20px;
+    border-radius: 50px; 
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    transition: transform 0.2s, opacity 0.2s;
     color: var(--base-white-color);
     background: linear-gradient(to right, var(--shade-color1), var(--shade-color2));
 }
 
 .btn-login {
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    transition: transform 0.2s, opacity 0.2s;
 
     color: var(--base-white-color);
     background: linear-gradient(to right, var(--shade-color3), var(--shade-color4));
@@ -174,12 +181,12 @@ nav ul {
 
     h1 {
         font-size: 2rem;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         color: var(--primary-color);
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin: 20px 0;
     }
 }
@@ -188,7 +195,7 @@ nav ul {
     width: 40%;
 
     img {
-        width: 100%;
+        width: 80%;
         object-fit: cover;
         border-radius: 50%;
         aspect-ratio: 1/1;
@@ -231,12 +238,13 @@ nav ul {
 }
 
 .item {
-    box-shadow: var(--box-shadow);
-    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px var(--box-shadow);
+    border-radius: 16px;
     background-color: var(--base-white-color);
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: var(--primary-color);
         margin-bottom: 10px;
     }
