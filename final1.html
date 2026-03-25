@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ที่เที่ยวนครปฐม - แถวละ 2 คอลัมน์</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Kanit', sans-serif; }
+        body { background-color: #f8f9fa; line-height: 1.6; color: #333; }
+
+        /* Navigation */
+        nav {
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #e67e22; }
+        .menu { display: flex; list-style: none; gap: 25px; }
+        .menu a { color: white; text-decoration: none; }
+        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; }
+
+        header { 
+            background: #e67e22; 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+
+        /* Container & Cards */
+        .container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 25px; 
+            padding: 40px 5%; 
+            max-width: 1000px; /* ปรับให้แคบลงเพื่อให้ 2 การ์ดดูสวยพอดี */
+            margin: auto; 
+            justify-content: center; 
+        }
+
+        .card { 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            /* ปรับเป็นแถวละ 2 อัน (50% ลบด้วย gap) */
+            flex: 0 0 calc(50% - 25px); 
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img { 
+            width: 100%; 
+            height: 250px; /* เพิ่มความสูงรูปเล็กน้อยให้เหมาะกับ 2 คอลัมน์ */
+            object-fit: cover; 
+        }
+
+        .card-content { padding: 20px; }
+        .card-content h3 { color: #2c3e50; margin-bottom: 10px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #2c3e50;
+                padding: 20px;
+                text-align: center;
+            }
+            .menu.show { display: flex; }
+            .card { flex: 0 0 100%; } /* มือถือแสดง 1 คอลัมน์เต็ม */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GO Nakhon Pathom</div>
+        <button class="hamburger" id="hamburger">☰</button>
+        <ul class="menu" id="nav-menu">
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#">สถานที่แนะนำ</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>มหัศจรรย์เมืองนครปฐม</h1>
+        <p>ไหว้พระเจดีย์ใหญ่ เที่ยวพระราชวัง ชมตลาดน้ำในวันเดียว</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://plus.unsplash.com/premium_photo-1672116453000-c31b150f48ef?q=80&w=800" alt="พระปฐมเจดีย์">
+            <div class="card-content">
+                <h3>พระปฐมเจดีย์</h3>
+                <p>เจดีย์ที่ใหญ่ที่สุดในไทย แลนด์มาร์คสำคัญที่ใครมานครปฐมต้องมาสักการะเพื่อความเป็นสิริมงคล</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?q=80&w=800" alt="พระราชวังสนามจันทร์">
+            <div class="card-content">
+                <h3>พระราชวังสนามจันทร์</h3>
+                <p>สัมผัสบรรยากาศย้อนยุคในพระราชวังที่มีสถาปัตยกรรมงดงามและร่มรื่นด้วยแมกไม้นานาพันธุ์</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1774249890206-081fd2e702d5?q=80&w=800" alt="ตลาดน้ำดอนหวาย">
+            <div class="card-content">
+                <h3>ตลาดน้ำดอนหวาย</h3>
+                <p>สวรรค์ของคนรักการกิน รวบรวมเป็ดพะโล้ ขนมไทย และของฝากจากท้องถิ่นริมแม่น้ำท่าจีน</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510006851064-e6056cd0e3a8?q=80&w=800" alt="วัดไร่ขิง">
+            <div class="card-content">
+                <h3>วัดไร่ขิง</h3>
+                <p>วัดชื่อดังริมแม่น้ำท่าจีน เป็นที่ประดิษฐานหลวงพ่อวัดไร่ขิงที่ชาวนครปฐมเคารพนับถืออย่างมาก</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('nav-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+
+</body>
+</html>
