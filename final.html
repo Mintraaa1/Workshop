@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Nakhon Pathom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Kanit', sans-serif; }
+        body { background-color: #f8f9fa; color: #2c3e50; }
+
+        /* --- Navigation --- */
+        nav {
+            background: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 600; color: #ff9f43; text-decoration: none; }
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .menu a:hover { color: #ff9f43; }
+
+        /* --- Hero --- */
+        header { 
+            background: #34495e;
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center;
+        }
+
+        /* --- Content Layout --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section-box { padding: 60px 0; }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        /* สลับตำแหน่ง: แถวที่เป็นเลขคู่ (2, 4) จะสลับด้านเนื้อหาและรูปภาพ */
+        .section-box:nth-child(even) .row {
+            flex-direction: row-reverse;
+        }
+
+        .image-wrapper { flex: 1; display: flex; justify-content: center; }
+
+        /* --- จุดที่แก้ไข: เพิ่ม Hover Effect ให้รูปภาพ --- */
+        .circular-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            
+            /* กำหนดความเร็วในการขยับ */
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        /* เมื่อเมาส์ชี้: ขยายขนาด 1.1 เท่า, ขยับขึ้น 15px และเพิ่มเงา */
+        .circular-img:hover {
+            transform: scale(1.1) translateY(-15px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            border-color: #ff9f43; /* เปลี่ยนสีขอบตอนชี้ให้เด่นขึ้น */
+        }
+
+        .text-wrapper { flex: 1; }
+        .text-wrapper h2 { font-size: 2.2rem; color: #e67e22; margin-bottom: 15px; }
+        .text-wrapper p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+
+        /* --- Footer --- */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 80px 10% 30px;
+            margin-top: 40px;
+            scroll-margin-top: 50px; 
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-section h3 { color: #ff9f43; margin-bottom: 20px; }
+        .footer-section p, .footer-section li { font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-links { list-style: none; }
+        .footer-links a { color: #bdc3c7; text-decoration: none; }
+        .footer-links a:hover { color: white; }
+        
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .row, .section-box:nth-child(even) .row { flex-direction: column; text-align: center; }
+            .circular-img { width: 250px; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">GO NAKHON PATHOM</a>
+        <ul class="menu">
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#chedi">สถานที่แนะนำ</a></li>
+            <li><a href="#">บทความ</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Unseen Nakhon Pathom</h1>
+        <p>สัมผัสมนต์เสน่ห์แห่งเมืองทวารวดี ในมุมมองที่คุณไม่เคยเห็น</p>
+    </header>
+
+    <div class="container">
+        <div class="section-box" id="chedi">
+            <div class="row">
+                <div class="image-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%90%E0%B8%A1%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%97%E0%B8%B4%E0%B8%A8%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD.jpg/250px-%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%90%E0%B8%A1%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%97%E0%B8%B4%E0%B8%A8%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD.jpg" class="circular-img" alt="องค์พระปฐมเจดีย์">
+                </div>
+                <div class="text-wrapper">
+                    <h2>องค์พระปฐมเจดีย์</h2>
+                    <p>สัมผัสความยิ่งใหญ่ของเจดีย์ที่สูงที่สุดในประเทศไทย ศูนย์รวมจิตใจของชาวพุทธที่งดงามโดดเด่นท่ามกลางตัวเมืองนครปฐม</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <div class="row">
+                <div class="image-wrapper">
+                    <img src="https://www.nakhonpathom.go.th/image/ratio/?file=files/com_travel/2016-06_0d951307611e138.jpg&width=695&height=433" class="circular-img" alt="พระราชวังสนามจันทร์">
+                </div>
+                <div class="text-wrapper">
+                    <h2>พระราชวังสนามจันทร์</h2>
+                    <p>เดินชมสถาปัตยกรรมตะวันตกผสมผสานไทยที่หาดูยาก ในบรรยากาศสวนสวยร่มรื่นที่เคยเป็นที่ประทับของ ร.6</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <div class="row">
+                <div class="image-wrapper">
+                    <img src="https://www.nakhonpathom.go.th/image/ratio/?file=files/com_travel/2016-06_6c8d761d9a26569.jpg&width=695&height=433" class="circular-img" alt="ตลาดน้ำดอนหวาย">
+                </div>
+                <div class="text-wrapper">
+                    <h2>ตลาดน้ำดอนหวาย</h2>
+                    <p>ลิ้มรสเป็ดพะโล้ในตำนานและขนมไทยโบราณริมแม่น้ำท่าจีน แหล่งรวมของอร่อยที่สายกินห้ามพลาด</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <div class="row">
+                <div class="image-wrapper">
+                    <img src="https://www.nakhonpathom.go.th/image/ratio/?file=files/com_travel/2016-06_5e46a6c548ae9fe.jpg&width=695&height=433" class="circular-img" alt="วัดไร่ขิง">
+                </div>
+                <div class="text-wrapper">
+                    <h2>วัดไร่ขิง</h2>
+                    <p>ขอพรหลวงพ่อวัดไร่ขิงเพื่อความเป็นสิริมงคล ชมความงามริมน้ำและบรรยากาศสุดสงบที่เป็นเอกลักษณ์</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Go Nakhon Pathom</h3>
+                <p>รวบรวมสถานที่ท่องเที่ยวและวัฒนธรรมอันล้ำค่าของจังหวัดนครปฐม</p>
+            </div>
+            <div class="footer-section">
+                <h3>เมนู</h3>
+                <ul class="footer-links">
+                    <li><a href="#">หน้าแรก</a></li>
+                    <li><a href="#chedi">สถานที่แนะนำ</a></li>
+                    <li><a href="#">บทความ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ติดต่อเรา</h3>
+                <p><i class="fas fa-envelope"></i> Email: info@nakhonpathom.go.th</p>
+                <p><i class="fas fa-phone"></i> โทร: 034-123-456</p>
+                <p><i class="fas fa-map-marker-alt"></i> นครปฐม, ประเทศไทย</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 GO Nakhon Pathom. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
